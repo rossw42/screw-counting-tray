@@ -2,7 +2,7 @@
 
 A 3D-printable tray for counting small parts (screws, nuts, washers) and bagging them.
 
-![Height map and cross-sections](tray_check.png)
+![Screw counting tray, four views](tray_views.png)
 
 ## How to use it
 
@@ -42,10 +42,9 @@ To regenerate the STL:
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python small_parts_tray.py        # writes SmallPartsTray.stl
-.venv/bin/python preview.py SmallPartsTray.stl tray_check.png   # height map and cross-sections
+.venv/bin/python render_views.py SmallPartsTray.stl tray_views.png   # the 4-view image above
+.venv/bin/python preview.py SmallPartsTray.stl tray_check.png        # height map and cross-sections
 ```
-
-`shade.py` makes ray-traced 3D close-ups (`.venv/bin/python shade.py SmallPartsTray.stl shaded.png`). It's slow, so expect it to take several minutes.
 
 ## Credits
 
